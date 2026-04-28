@@ -590,7 +590,7 @@ textarea {
 
 .portfolio-shell {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 28px;
   align-items: stretch;
 }
@@ -600,6 +600,22 @@ textarea {
   border-radius: var(--radius);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(216, 244, 246, 0.52));
   border: 1px solid rgba(16, 167, 196, 0.18);
+}
+
+.portfolio-video-panel {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 28px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(226, 245, 247, 0.72));
+  border: 1px solid rgba(16, 167, 196, 0.16);
+  box-shadow: 0 16px 36px rgba(9, 26, 31, 0.06);
+}
+
+.portfolio-video-panel p {
+  margin: 16px 0 0;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .project-card-grid {
@@ -901,6 +917,64 @@ textarea {
   line-height: 1.65;
 }
 
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.portfolio-gallery-compact {
+  margin-top: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.portfolio-media-card {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(7, 20, 23, 0.08);
+  box-shadow: 0 16px 36px rgba(9, 26, 31, 0.06);
+}
+
+.portfolio-media-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  background: linear-gradient(180deg, rgba(16, 167, 196, 0.08), rgba(46, 103, 255, 0.08));
+}
+
+.portfolio-media-card.is-landscape img {
+  aspect-ratio: 16 / 10;
+}
+
+.portfolio-media-card figcaption {
+  display: grid;
+  gap: 8px;
+  padding: 18px 18px 20px;
+}
+
+.portfolio-media-card strong {
+  font-family: "Sora", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.portfolio-media-card span {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.portfolio-gallery-compact .portfolio-media-card img {
+  aspect-ratio: 4 / 3;
+}
+
+.portfolio-gallery-compact .portfolio-media-card.is-landscape img {
+  aspect-ratio: 16 / 10;
+}
+
 .contact-grid {
   grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
 }
@@ -1020,6 +1094,7 @@ textarea {
   }
 
   .services-grid,
+  .portfolio-gallery,
   .values-grid,
   .benefits-grid,
   .process-grid,
@@ -1188,6 +1263,7 @@ textarea {
   .logo-cloud,
   .field-grid,
   .services-grid,
+  .portfolio-gallery,
   .values-grid,
   .benefits-grid,
   .process-grid,
